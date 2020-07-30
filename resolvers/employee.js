@@ -1,4 +1,4 @@
-const { employees } = require('../constants');
+const { employees, departments } = require('../constants');
 const { applyFilter, returnConnection } = require('./helpers');
 
 module.exports = {
@@ -29,5 +29,8 @@ module.exports = {
             });
             return `Employee with id ${id} has been deleted`;
         },
+    },
+    Employee: {
+        department: ({ dep_id }) => departments.find(department => department.id === dep_id)
     }
 }

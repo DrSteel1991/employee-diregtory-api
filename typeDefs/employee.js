@@ -36,6 +36,7 @@ module.exports = gql`
         jobTitle: String!
         age: Int!
         picture: String
+        department: Department
     }
 
     type EmployeeConnection {
