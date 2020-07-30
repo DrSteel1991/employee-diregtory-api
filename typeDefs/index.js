@@ -1,3 +1,4 @@
+const companyTypeDefs = require('./company');
 const employeeTypeDefs = require('./employee');
 const { gql } = require('apollo-server-express');
 
@@ -13,5 +14,6 @@ const  typeDefs = gql`
 
 module.exports = [
     typeDefs,
+    companyTypeDefs,
     employeeTypeDefs
 ]
