@@ -1,11 +1,11 @@
-const { companies, departments } = require('../constants');
+const { departments, employees } = require('../constants');
 
 module.exports = {
     Query: {
-        companies: (_, { first = 50, after = 0 }) => {
-            const index = companies.map(m => m.id).indexOf(after) + 1
-            const totalCount = companies.length	
-            const edges = companies.slice(index, index + first).map(m => ({
+        departments: (_, { first = 50, after = 0 }) => {
+            const index = departments.map(m => m.id).indexOf(after) + 1
+            const totalCount = departments.length	
+            const edges = departments.slice(index, index + first).map(m => ({
                 cursor: m.id,
                 node: { ...m }
             }))
@@ -21,14 +21,15 @@ module.exports = {
                 edges
             }	
         },
-        company: (_, { id }) => companies.find(company => company.id === id)
+        department: (_, { id }) => departments.find(department => department.id === id)
     },
-    Company: {
-        departments: ({ id }, {first = 50, after = 0}) => {
-            const filtertedDepartments = departments.filter(department => department.company_id === id)
-            const index = filtertedDepartments.map(m => m.id).indexOf(after) + 1
-            const totalCount = filtertedDepartments.length	
-            const edges = filtertedDepartments.slice(index, index + first).map(m => ({
+    Department: {
+        employees: ({ id }, {first = 50, after = 0}) => {
+            const filtertedEmployees = employees.filter(employee => employee.dep_id === id);
+            console.log(id);
+            const index = filtertedEmployees.map(m => m.id).indexOf(after) + 1
+            const totalCount = filtertedEmployees.length	
+            const edges = filtertedEmployees.slice(index, index + first).map(m => ({
                 cursor: m.id,
                 node: { ...m }
             }))

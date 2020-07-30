@@ -1,9 +1,9 @@
 const companyResolver = require('./company');
-const locationResolver = require('./location');
+const departmentResolver = require('./department');
 const employeeResolver = require('./employee');
 
 module.exports = [
     companyResolver,
-    locationResolver,
+    departmentResolver,
     employeeResolver
 ]

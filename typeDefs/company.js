@@ -10,7 +10,7 @@ module.exports = gql`
         id: Int!
         name: String!
         website: String!
-        locations(first: Int, after: Int): LocationConnection
+        departments(first: Int, after: Int): DepartmentConnection
     }
 
     type CompanyConnection {

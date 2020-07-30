@@ -6,73 +6,26 @@ module.exports.companies = [
     }
 ];
 
-module.exports.locations = [
-    {
-        "id": 1,
-        "name": "Lebanon",
-        "company_id": 1
-    },
-    {
-        "id": 2,
-        "name": "USA",
-        "company_id": 1
-    }
-];
-
 module.exports.departments = [
     {
         "id": 1,
         "name": "E-TEAM",
+        "company_id": 1,
     },
     {
         "id": 2,
         "name": "Engineering",
+        "company_id": 1,
     },
     {
         "id": 3,
         "name": "Marketing",
+        "company_id": 1,
     },
     {
         "id": 4,
         "name": "Sales",
-    },
-];
-
-module.exports.departments_locations = [
-    {
-        "id": 1,
-        "dep_id": 1,
-        "location": 1
-    },
-    {
-        "id": 2,
-        "dep_id": 1,
-        "location": 2
-    },
-    {
-        "id": 3,
-        "dep_id": 2,
-        "location": 1
-    },
-    {
-        "id": 4,
-        "dep_id": 2,
-        "location": 2
-    },
-    {
-        "id": 5,
-        "dep_id": 3,
-        "location": 2
-    },
-    {
-        "id": 6,
-        "dep_id": 4,
-        "location": 1
-    },
-    {
-        "id": 7,
-        "dep_id": 4,
-        "location": 2
+        "company_id": 1,
     },
 ];
 
@@ -84,6 +37,7 @@ module.exports.employees = [
         "jobTitle":"CEO",
         "age":"40",
         "picture":"luke.jpg",
+        "location": "USA",
         "dep_id": 1
     },
     {
@@ -93,6 +47,7 @@ module.exports.employees = [
         "jobTitle":"Senior Software Eningeer",
         "age":"30",
         "picture":"anthony.jpg",
+        "location": "USA",
         "dep_id": 2
     },
     {
@@ -102,6 +57,7 @@ module.exports.employees = [
         "jobTitle":"Software Eningeer",
         "age":"34",
         "picture":"john.jpg",
+        "location": "USA",
         "dep_id": 2
     },
     {
@@ -111,6 +67,7 @@ module.exports.employees = [
         "jobTitle":"Software Eningeer",
         "age":"23",
         "picture":"darth.jpg",
+        "location": "USA",
         "dep_id": 2
     },
     {
@@ -120,6 +77,7 @@ module.exports.employees = [
         "jobTitle":"Marketing Executive",
         "age":"27",
         "picture":"leia.jpg",
+        "location": "USA",
         "dep_id": 3
     },
     {
@@ -129,6 +87,7 @@ module.exports.employees = [
         "jobTitle":"Software Eningeer",
         "age":"40",
         "picture":"jon.jpg",
+        "location": "Lebanon",
         "dep_id": 2
     },
     {
@@ -138,6 +97,7 @@ module.exports.employees = [
         "jobTitle":"Senior Software Eningeer",
         "age":"30",
         "picture":"anthonym.jpg",
+        "location": "Lebanon",
         "dep_id": 2
     },
     {
@@ -147,6 +107,7 @@ module.exports.employees = [
         "jobTitle":"Software Eningeer",
         "age":"34",
         "picture":"johnd.jpg",
+        "location": "Lebanon",
         "dep_id": 2
     },
     {
@@ -156,6 +117,7 @@ module.exports.employees = [
         "jobTitle":"Marketing Executive",
         "age":"23",
         "picture":"vanessa.jpg",
+        "location": "Lebanon",
         "dep_id": 3
     },
     {
@@ -165,6 +127,7 @@ module.exports.employees = [
         "jobTitle":"Marketing Executive",
         "age":"27",
         "picture":"layal.jpg",
+        "location": "Lebanon",
         "dep_id": 3
     },
     {
@@ -174,6 +137,7 @@ module.exports.employees = [
         "jobTitle":"Sales Manager",
         "age":"21",
         "picture":"pascale.jpg",
+        "location": "USA",
         "dep_id": 4
     },
     {
@@ -183,6 +147,7 @@ module.exports.employees = [
         "jobTitle":"Senior Software Eningeer",
         "age":"30",
         "picture":"anthonyt.jpg",
+        "location": "USA",
         "dep_id": 2
     },
     {
@@ -192,6 +157,7 @@ module.exports.employees = [
         "jobTitle":"Principal Engineer",
         "age":"34",
         "picture":"lionel.jpg",
+        "location": "USA",
         "dep_id": 2
     },
     {
@@ -201,6 +167,7 @@ module.exports.employees = [
         "jobTitle":"Software Eningeer",
         "age":"23",
         "picture":"rob.jpg",
+        "location": "USA",
         "dep_id": 2
     },
     {
@@ -210,6 +177,7 @@ module.exports.employees = [
         "jobTitle":"COO",
         "age":"27",
         "picture":"sansa.jpg",
+        "location": "USA",
         "dep_id": 1
     },
     {
@@ -219,6 +187,7 @@ module.exports.employees = [
         "jobTitle":"Sales Manager",
         "age":"27",
         "picture":"robert.jpg",
+        "location": "Lebanon",
         "dep_id": 4
     },
     {
@@ -228,6 +197,7 @@ module.exports.employees = [
         "jobTitle":"Sales Manager",
         "age":"27",
         "picture":"linch.jpg",
+        "location": "Lebanon",
         "dep_id": 4
     },
     {
@@ -237,6 +207,7 @@ module.exports.employees = [
         "jobTitle":"Senior Sales Manager",
         "age":"37",
         "picture":"jake.jpg",
+        "location": "Lebanon",
         "dep_id": 4
     },
     {
@@ -246,6 +217,7 @@ module.exports.employees = [
         "jobTitle":"Marketing Executive",
         "age":"27",
         "picture":"robertc.jpg",
+        "location": "Lebanon",
         "dep_id": 3
     },
     {
@@ -255,6 +227,7 @@ module.exports.employees = [
         "jobTitle":"HR",
         "age":"40",
         "picture":"lebron.jpg",
+        "location": "Lebanon",
         "dep_id": 1
     }
   ];
