@@ -10,10 +10,12 @@ module.exports.locations = [
     {
         "id": 1,
         "name": "Lebanon",
+        "company_id": 1
     },
     {
         "id": 2,
         "name": "USA",
+        "company_id": 1
     }
 ];
 
@@ -21,22 +23,18 @@ module.exports.departments = [
     {
         "id": 1,
         "name": "E-TEAM",
-        "company_id": 1
     },
     {
         "id": 2,
         "name": "Engineering",
-        "company_id": 1
     },
     {
         "id": 3,
         "name": "Marketing",
-        "company_id": 1
     },
     {
         "id": 4,
         "name": "Sales",
-        "company_id": 1
     },
 ];
 

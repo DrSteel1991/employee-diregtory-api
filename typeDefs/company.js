@@ -10,6 +10,7 @@ module.exports = gql`
         id: Int!
         name: String!
         website: String!
+        locations(first: Int, after: Int): LocationConnection
     }
 
     type CompanyConnection {
@@ -20,6 +21,6 @@ module.exports = gql`
 
     type CompanyEdge {
         cursor: Int
-        node: Employee
+        node: Company
     }
 `;
