@@ -1,25 +1,14 @@
 const { employees } = require('../constants');
+const { applyFilter, returnConnection } = require('./helpers');
 
 module.exports = {
     Query: {
-        employees: (_, { first = 50, after = 0 }) => {
-            const index = employees.map(m => m.id).indexOf(after) + 1
-            const totalCount = employees.length	
-            const edges = employees.slice(index, index + first).map(m => ({
-                cursor: m.id,
-                node: { ...m }
-            }))
-            const lastCursor = edges[edges.length - 1].node.id
-            const pageInfo = {
-                lastCursor,
-                hasNextPage: totalCount + first > lastCursor + first
+        employees: (_, { filter, first = 50, after = 0 }) => {
+            if (filter) {
+                filteredArray = applyFilter(employees, filter)
+                return returnConnection(filteredArray, first, after)
             }
-            
-            return {
-                totalCount,
-                pageInfo,
-                edges
-            }	
+            return returnConnection(employees, first, after)
         },
         employee: (_, { id }) => employees.find(employee => employee.id === id),
     },

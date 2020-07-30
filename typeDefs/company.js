@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-express');
 
 module.exports = gql`
     extend type Query{
-        companies(first: Int, after: Int): CompanyConnection
+        companies(filter: FilterInput, first: Int, after: Int): CompanyConnection
         company(id: Int!): Company
     }
 
@@ -10,7 +10,7 @@ module.exports = gql`
         id: Int!
         name: String!
         website: String!
-        departments(first: Int, after: Int): DepartmentConnection
+        departments(filter: FilterInput, first: Int, after: Int): DepartmentConnection
     }
 
     type CompanyConnection {
