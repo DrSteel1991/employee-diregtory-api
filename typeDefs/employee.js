@@ -17,15 +17,19 @@ module.exports = gql`
         email: String!
         jobTitle: String!
         age: Int!
+        location: String!
+        dep_id: Int!
         picture: String  
     }
 
     input updateEmployeeInput {
         id: Int!
-        name: String!
-        email: String!
-        jobTitle: String!
-        age: Int!
+        name: String
+        email: String
+        jobTitle: String
+        age: Int
+        location: String
+        dep_id: Int
         picture: String  
     }
 
@@ -35,6 +39,7 @@ module.exports = gql`
         email: String!
         jobTitle: String!
         age: Int!
+        location: String!
         picture: String
         department: Department
     }
