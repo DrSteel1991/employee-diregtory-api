@@ -8,17 +8,24 @@ module.exports.applyFilter = (arr, filter) => {
 } 
 
 module.exports.returnConnection = (arr, first, after) => {
-    const index = arr.map(m => m.id).indexOf(after) + 1
-    const totalCount = arr.length	
-    const edges = arr.slice(index, index + first).map(m => ({
-        cursor: m.id,
-        node: { ...m }
-    }))
-    const lastCursor = edges[edges.length - 1].node.id
-    const pageInfo = {
-        lastCursor,
-        hasNextPage: totalCount + first > lastCursor + first
-    }  
+    arr = arr.sort((a, b) => b.id - a.id )
+    const totalCount = arr.length
+    let edges = []
+    let lastCursor = null
+    let pageInfo = {}
+    if (totalCount > 0) {
+        edges = arr.slice(after, after + first).map(m => ({
+            cursor: m.id,
+            node: { ...m }
+        }))
+        if (edges.length > 0) {
+            lastCursor = edges[edges.length - 1].node.id
+        }
+        pageInfo = {
+            lastCursor,
+            hasNextPage: totalCount > first + after
+        }
+    }
     return {
         totalCount,
         pageInfo,

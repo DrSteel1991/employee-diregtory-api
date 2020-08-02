@@ -16,9 +16,9 @@ module.exports = gql`
         name: String!
         email: String!
         jobTitle: String!
-        age: Int!
+        age: String!
         location: String!
-        dep_id: Int!
+        dep_id: Int
         picture: String  
     }
 
@@ -27,7 +27,7 @@ module.exports = gql`
         name: String
         email: String
         jobTitle: String
-        age: Int
+        age: String
         location: String
         dep_id: Int
         picture: String  
@@ -38,7 +38,7 @@ module.exports = gql`
         name: String!
         email: String!
         jobTitle: String!
-        age: Int!
+        age: String!
         location: String!
         picture: String
         department: Department
