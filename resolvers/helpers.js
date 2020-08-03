@@ -1,10 +1,14 @@
 module.exports.applyFilter = (arr, filter) => {
-    const field = filter.field;
-    const value = filter.value;
-    if (filter.op === 'EQ') {
-        return arr.filter(o => o[field] === value);
+    let field = filter.field;
+    let value = filter.value.toLowerCase();
+    if (field === 'dep_id') {
+        value = parseInt(value)
+        return arr.filter(o => o[field] === value); 
     }
-    return arr.find(o => o[field] === value);
+    if (filter.op === 'LIKE') {
+        return arr.filter(o => o[field].toLowerCase().includes(value));
+    }
+    return arr.filter(o => o[field].toLowerCase() === value);
 } 
 
 module.exports.returnConnection = (arr, first, after) => {
