@@ -31,7 +31,16 @@ app.use('/', (req, res, next) => {
     res.send({message: 'helloooo'});
 })
 
-app.listen(PORT, () => {
-    console.log(`server listening on PORT ${PORT}`);
-    console.log(`Graphql Endpoint: ${apolloServer.graphqlPath}`);
-})
+// app.listen(PORT, () => {
+//     console.log(`server listening on PORT ${PORT}`);
+//     console.log(`Graphql Endpoint: ${apolloServer.graphqlPath}`);
+// })
+
+var server = app.listen(PORT, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+  
+    console.log('App listening at http://%s:%s', host, port);
+});
+
+module.exports = server
