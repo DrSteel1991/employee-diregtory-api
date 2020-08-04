@@ -17,7 +17,6 @@ app.use(cors());
 app.use(express.json());
 
 
-
 const apolloServer = new ApolloServer({
     typeDefs,
     resolvers
@@ -30,11 +29,6 @@ const PORT = process.env.PORT || 4000;
 app.use('/', (req, res, next) => {
     res.send({message: 'helloooo'});
 })
-
-// app.listen(PORT, () => {
-//     console.log(`server listening on PORT ${PORT}`);
-//     console.log(`Graphql Endpoint: ${apolloServer.graphqlPath}`);
-// })
 
 var server = app.listen(PORT, function () {
     var host = server.address().address;
